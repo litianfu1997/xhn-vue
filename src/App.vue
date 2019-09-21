@@ -1,6 +1,7 @@
 <template>
   <div id="app">
       <navMenu></navMenu>
+      <RouterView></RouterView>
   </div>
 </template>
 
@@ -10,7 +11,7 @@ import navMenu from './components/navMenu'
 export default {
   name: 'app',
   components:{
-    navMenu: navMenu
+    navMenu: navMenu,
   }
 
 }

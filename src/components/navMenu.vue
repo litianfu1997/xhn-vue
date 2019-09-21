@@ -1,12 +1,13 @@
 <template>
     <el-menu
-            default-active="1"
+            default-active="/"
             class="el-menu nav"
             mode="horizontal"
             @select="handleSelect"
             background-color="#f45a8d"
             text-color="#fff"
             active-text-color="#ffd04b"
+            router="true"
             >
             <div class="left-box con-row">
                 <div style="display: flex;flex-direction: row;align-items: center;">
@@ -22,20 +23,16 @@
                 </el-menu-item>
 
             </div>
-
-
-            <el-menu-item  index="main">首页</el-menu-item>
-            <el-menu-item index="msg" >消息中心</el-menu-item>
-            <el-menu-item index="3">其他</el-menu-item>
+            <el-menu-item  index="/">首页</el-menu-item>
+            <el-menu-item index="/msg" >消息中心</el-menu-item>
+            <el-menu-item index="/putout">发布</el-menu-item>
             <el-avatar class="nav-avatar" size="medium" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"></el-avatar>
-            <el-submenu  index="4">
+            <el-submenu  index="/center">
                 <template slot="title">个人中心</template>
-                <el-menu-item index="4-1">我的帖子</el-menu-item>
+                <el-menu-item index="/myText">我的帖子</el-menu-item>
                 <el-menu-item index="4-2">选项2</el-menu-item>
-                <el-menu-item index="4-3">退出登录</el-menu-item>
+                <el-menu-item >退出登录</el-menu-item>
             </el-submenu>
-
-
 
     </el-menu>
 </template>
@@ -78,5 +75,8 @@
     .con-row{
         display: flex;
         flex-direction: row;
+    }
+    .el-submenu__title i{
+        color: white;
     }
 </style>
