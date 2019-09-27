@@ -30,7 +30,7 @@
             <el-submenu  index="/center">
                 <template slot="title">个人中心</template>
                 <el-menu-item index="/myText">我的帖子</el-menu-item>
-                <el-menu-item index="4-2">选项2</el-menu-item>
+                <el-menu-item index="/collection">个人收藏</el-menu-item>
                 <el-menu-item >退出登录</el-menu-item>
             </el-submenu>
 

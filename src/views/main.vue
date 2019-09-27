@@ -1,13 +1,13 @@
 <template>
     <el-container class="el-container-big">
         <el-container>
-            <el-header class="el-header">
+            <el-header class="el-header top">
                 <el-tabs v-model="activeName" @tab-click="handleClick">
                     <el-tab-pane label="最新" name="first">
 
 
                     </el-tab-pane>
-                    <el-tab-pane label="一周最热" name="second">
+                    <el-tab-pane label="推荐" name="second">
 
                     </el-tab-pane>
                     <el-tab-pane label="最热" name="third">
@@ -18,8 +18,37 @@
                     </el-tab-pane>
                 </el-tabs>
             </el-header>
-            <el-main class="el-main">
-                最新
+            <el-main class="el-main center">
+                <el-container style="width: 70%;">
+                    <el-card shadow="hover">
+                        <el-header class="box-top" style="height: 45px;">
+                            <div>
+                                <el-avatar class="nav-avatar" size="medium" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"></el-avatar>
+                            </div>
+                            <div style="margin-left: 10px;">
+                                <div style="font-size: 14px;">你的小白象</div>
+                                <div style="font-size: 12px;color: #999999;">9月26 8:24</div>
+                            </div>
+                        </el-header>
+                        <el-main class="box-mid">
+                            <div>表白我老婆</div>
+                            <div style="width: 100%;height: 100%;">
+                                <img src="../assets/xyjy.jpg" style=" width: 100%;height: 100%; object-fit: contain;" >
+                            </div>
+                        </el-main>
+                        <el-footer class="box-bot" style="height: 30px;">
+                            <img class="bot-img" src="../assets/dz.png">
+                            <span class="bot-text">1</span>
+                            <el-divider direction="vertical"></el-divider>
+                            <img class="bot-img" src="../assets/pl.png">
+                            <span class="bot-text">1</span>
+                            <el-divider direction="vertical"></el-divider>
+                            <img class="bot-img" src="../assets/sc.png" >
+                            <span class="bot-text">1</span>
+
+                        </el-footer>
+                    </el-card>
+                </el-container>
             </el-main>
             <el-footer class="el-footer">
                 <el-pagination
@@ -35,7 +64,17 @@
 
         </el-container>
         <el-aside class="el-aside">
-            侧边
+            <el-container>
+                <el-header>
+                    公告
+                </el-header>
+                <el-main>
+                    热门推荐
+                </el-main>
+                <el-main>
+                    内容推广
+                </el-main>
+            </el-container>
         </el-aside>
 
 
@@ -72,20 +111,48 @@
         padding: 0 100px;
     }
     .el-header, .el-footer {
-        color: #ffffff;
-        line-height: 60px;
+        color: #000;
+
     }
-    .el-main {
-        background-color: #E9EEF3;
-        color: #333;
-        text-align: center;
-        height: 500px;
+
+
+
+    .box-top{
+        width: 100%;
+
+        border-bottom: 1px solid #eee;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #ffffff;
     }
-    .el-aside {
-        background-color: #D3DCE6;
-        color: #333;
-        text-align: center;
-        line-height: 200px;
+    .box-mid{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #ffffff;
+
     }
+    .box-bot{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background: #ffffff;
+    }
+    .bot-img{
+        width: 20px;
+        height: 20px;
+
+    }
+    .bot-text{
+        color: #999;
+        margin-left: 5px;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+
+
 
 </style>
