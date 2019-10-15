@@ -18,7 +18,7 @@
                 <div style="display: flex;flex-direction: row;align-items: center;margin-right: 10px">
                     <el-input class="nav-input" type="text" v-model="inputText"  placeholder="请输入名称" suffix-icon="el-icon-search"></el-input>
                 </div>
-                <el-menu-item index="community">
+                <el-menu-item index="/">
                     <el-link href="http://www.tech4flag.com/community/index" style="color: white;" target="_blank" :underline="false">有个社区</el-link>
                 </el-menu-item>
 
